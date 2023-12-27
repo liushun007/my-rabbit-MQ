@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    host: localhost
+    virtual-host: testhost
+    username: admin
+    password: LSH12580
+    port: 5672
+#    \u4FEE\u6539\u914D\u7F6E\u6587\u4EF6 \u5173\u95ED\u81EA\u52A8ack \u5F00\u542F\u624B\u52A8ack
+    listener:
+      simple:
+        acknowledge-mode: manual
+#    \u7F16\u5199\u914D\u7F6E\u6587\u4EF6\uFF0C\u5F00\u542FConfirm\u548CReturn
+    publisher-confirm-type: simple
+    publisher-returns: true
+
+
